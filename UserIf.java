@@ -16,10 +16,18 @@ public class UserIf {
     }
 
     public void ListOfToys() {
+        Scanner write = new Scanner(System.in);
         AddToy add = new AddToy();
         ArrayList<String> Toyslist = add.ToyList();
         for (int i = 0; i<Toyslist.size();i++){System.out.println(Toyslist.get(i));}
-        System.out.println("1.Вернуться в меню");
+        System.out.println("1.Вернуться в меню \n 2. Закрыть программу");
+        int num = write.nextInt();
+        if (num == 1) menu();
+        else if (num == 2) System.exit(0);
+        
+
+
+
     }
 
     public  void AddToys() {
